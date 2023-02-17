@@ -1,0 +1,48 @@
+div.container {
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  /* background-color: red;22 */
+}
+
+div.calculadora {
+  background-color: black;
+  color: white;
+  width: 17%;
+  height: 26.5em;
+  border-radius: 20px;
+}
+
+div.result {
+  text-align: right;
+  font-size: 2em;
+  margin-right: 15px;
+}
+
+h1 {
+  color: rgb(16, 230, 80);
+  padding-top: 20px;
+  text-align: center;
+}
+
+button {
+  width: 3em;
+  height: 3em;
+  border: none;
+  border-radius: 2em;
+  margin: 0.3em;
+  margin-left: 14px;
+  background-color: rgba(27, 7, 7, 0.658);
+  color: white;
+}
+
+button.green {
+  color: rgba(26, 226, 26, 0.87);
+  font-weight: bold;
+}
+
+button.red {
+  color: red;
+  font-weight: bold;
+}
