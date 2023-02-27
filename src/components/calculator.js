@@ -3,8 +3,9 @@ import React, { useState } from "react";
 import "./estilo.css";
 
 function Calculator() {
+  // const [resultado, setResultado] = useState([]);
   const [number, setNumber] = useState(0);
-  const [numberantigo, SetNumeroantigo] = useState(0);
+  const [numberantigo, SetNumeroantigo] = useState();
   const [operador, setOperador] = useState();
 
   function Botao(e) {
@@ -14,7 +15,14 @@ function Calculator() {
     } else {
       setNumber(number + input);
     }
+
+    //   const resultados = ["*", "/", "+", "%", "-"];
+
+    //   const resultados2 = resultado;
+    //   resultado.push(resultados);
+    //   setResultado(resultados2);
   }
+
   function Limpar() {
     setNumber(0);
   }
@@ -52,85 +60,102 @@ function Calculator() {
 
   return (
     <div className="container">
-    <div className="calculadora">
       <div>
         <h1>Calculadora</h1>
       </div>
-      <div className="result">
-        <p> {number}</p>
-      </div>
-      <div className="botaoone">
-        <button onClick={Limpar} className="red">
-          C
-        </button>
-        <button className="green">()</button>
-        <button className="green" onClick={Porcentagem} >
-          %
-        </button>
-        <button className="green" onClick={valor} value="/" >
-          ÷
-        </button>
-      </div>
 
-      <div>
-        <button onClick={Botao} value={7}>
-          7
-        </button>
-        <button onClick={Botao} value={8}>
-          8
-        </button>
-        <button onClick={Botao} value={9}>
-          9
-        </button>
-        <button className="green" onClick={valor} value="x">
-          X
-        </button>
-      </div>
+      <div className="calculadora">
+        <div className="result">
+          <p> {number}</p>
+        </div>
 
-      <div>
-        <button onClick={Botao} value={4}>
-          4
-        </button>
-        <button onClick={Botao} value={5}>
-          5
-        </button>
-        <button onClick={Botao} value={6}>
-          6
-        </button>
-        <button className="green" onClick={valor} value="-">
-          -
-        </button>
-      </div>
+        <div className="botaoone">
+          <button onClick={Limpar} className="red">
+            C
+          </button>
 
-      <div>
-        <button onClick={Botao} value={1}>
-          1
-        </button>
-        <button onClick={Botao} value={2}>
-          2
-        </button>
-        <button onClick={Botao} value={3}>
-          3
-        </button>
-        <button className="green" onClick={valor} value="+">
-          +
-        </button>
-      </div>
+          <button className="green">( )</button>
 
-      <div>
-        <button onClick={Manipulador}>+/-</button>
-        <button onClick={Botao} value={0}>
-          0
-        </button>
-        <button onClick={Botao} value={","}>
-          ,
-        </button>
-        <button className="green" onClick={Calcular}>
-          =
-        </button>
+          <button className="green" onClick={Porcentagem}>
+            %
+          </button>
+
+          <button className="green" onClick={valor} value="/">
+            ÷
+          </button>
+        </div>
+
+        <div>
+          <button onClick={Botao} value={7}>
+            7
+          </button>
+
+          <button onClick={Botao} value={8}>
+            8
+          </button>
+
+          <button onClick={Botao} value={9}>
+            9
+          </button>
+
+          <button className="green" onClick={valor} value="x">
+            X
+          </button>
+        </div>
+
+        <div>
+          <button onClick={Botao} value={4}>
+            4
+          </button>
+
+          <button onClick={Botao} value={5}>
+            5
+          </button>
+
+          <button onClick={Botao} value={6}>
+            6
+          </button>
+
+          <button className="green" onClick={valor} value="-">
+            -
+          </button>
+        </div>
+
+        <div>
+          <button onClick={Botao} value={1}>
+            1
+          </button>
+
+          <button onClick={Botao} value={2}>
+            2
+          </button>
+
+          <button onClick={Botao} value={3}>
+            3
+          </button>
+
+          <button className="green" onClick={valor} value="+">
+            +
+          </button>
+        </div>
+
+        <div>
+          <button onClick={Manipulador}>+/-</button>
+
+          <button onClick={Botao} value={0}>
+            0
+          </button>
+
+          <button onClick={Botao} value={","}>
+            ,
+          </button>
+
+          <button className="green" onClick={Calcular}>
+            =
+          </button>
+        </div>
       </div>
-      </div>
-      </div>
+    </div>
   );
 }
 
